@@ -1,0 +1,11 @@
+mixin popup(modifier)
+  .popup.popup--hide
+    .popup__content 
+      img(src="img/closed.svg").popup__close
+      h2.popup__title Оставьте заявку и получите оптовый прайс на весь ассортимент кофе
+      p.popup__text Мы позвоним вам, вышлем оптовый прайс и ответим на все вопросы.
+      .popup__form
+        input(type="tel" placeholder="Ваш номер телефона").popup__tel
+        input(type="email" placeholder="Ваш Email").popup__email
+        button.popup__btn Оставить заявку
+    .popup__background

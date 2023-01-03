@@ -1,0 +1,17 @@
+mixin form(title, image)
+  section.form&attributes(attributes)
+    .form__content(class=image=="cup" ? "form__content--cup" : "")(class=image=="bigcup" ? "form__content--bigcup" : "")
+      img.form__image(src=`img/${image}.png` alt="Пачка" class=image=="cup" ? "form__image--cup" : "")
+      .form__info
+        .form__titles(class=image=="bigcup" ? "form__titles--bigcup" : "")
+          if image!="bigcup"
+            h2.form__title Оставьте заявку сейчас!
+          h2.form__title=title
+        if image=="bigcup"
+          p.form__textone Оставьте заявку сейчас! 
+            br
+            | Получите каталог сортов кофе  с подробным описанием и оптовыми ценами!
+        form.form__form(class=image=="cup" ? "form__form--cup" : "")
+          input(type="tel" placeholder="Ваш номер телефона").form__input
+          button.form__button Оставить заявку
+        p.form__text(class=image=="bigcup" ? "form__text--bigcup" : "") Позвоним вам и ответим на все ваши вопросы, поможем выбрать сорт кофе.

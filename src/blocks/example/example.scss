@@ -1,0 +1,121 @@
+.example {
+    background: #F5F8F9;
+    &__content {
+        width: 95%;
+        max-width: 1440px;
+        margin: 0 auto;
+        padding-bottom: 60px;
+    }
+
+    &__info {
+        margin-bottom: 70px;
+    }
+
+    &__titleone {
+        font-family: Oswald;
+        font-weight: 500;
+        font-size: px-to-em(40);
+        line-height: 148%;
+        text-transform: uppercase;
+        color: #1A1C1D;
+        margin: 0 0 40px 95px;
+        max-width: 705px;
+        padding-top: 100px;
+    }
+
+    &__textone {
+        font-weight: normal;
+        font-size: px-to-em(17);
+        line-height: 140%;
+        color: #332F2F;
+        max-width: 500px;
+        margin: 0 0 70px 95px;
+    }
+
+    &__box {
+        @include flex-dir(row, space-around, none);
+        margin: 0 100px;
+        border-bottom: 5px solid #EAEAEA;
+        padding-bottom: 40px;
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: px-to-em(24);
+        line-height: 120%;
+        color: #1A1C1D;
+        margin: 30px 0 10px;
+    }
+
+    &__text {
+        font-weight: normal;
+        font-size: px-to-em(17);
+        line-height: 140%;
+        color: #32363C;
+        max-width: 290px;
+        height: 70px;
+    }
+
+    &__price {
+        font-family: Oswald;
+        font-weight: 500;
+        font-size: px-to-em(20);
+        line-height: 400%;
+        text-transform: uppercase;
+        color: #1A1C1D;
+    }
+
+    @media screen and (max-width: 1200px) {
+        &__info {
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        &__titleone {
+            max-width: 100%;
+            margin: 0 0 40px 0;
+        }
+
+        &__textone {
+            max-width: 100%;
+            margin: 0 0 50px 0;
+        }
+
+        &__box {
+            @include flex-dir();
+            text-align: center;
+            margin: 0;
+        }
+
+        &__main {
+            display: none;
+            &--open {
+                display: block;
+            }
+        }
+    }
+
+    @media screen and (max-width: 360px) {
+        &__info {
+            text-align: left;
+        }
+
+        &__titleone {
+            font-size: px-to-em(32);
+            font-weight: 147%;
+            width: 250px;
+        }
+
+        &__textone {
+            font-weight: 400;
+            font-size: px-to-em(16);
+        }
+
+        &__box {
+            text-align: left;
+        }
+
+    }
+
+    
+}

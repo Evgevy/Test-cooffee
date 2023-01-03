@@ -1,0 +1,211 @@
+.form {
+    background: #F5F8F9;
+    position: relative;
+    
+    &__content {
+        width: 95%;
+        max-width: 1440px;
+        margin: 0 auto;
+        @include flex-dir(row);
+        padding: 30px 0 44px;
+        &--cup {
+            justify-content: flex-end;
+            padding: 40px 0 70px 0;
+        }
+    }
+
+    &__image {
+        &--cup  {
+            position: absolute;
+            left: 0px;
+            width: 38%;
+        }
+    }
+    
+    &__info {
+        margin-left: 26px;
+        
+}
+
+    &__titles {
+        margin-bottom: 25px;
+        &--bigcup {
+            font-size: px-to-em(40);
+            line-height: 148%;
+            max-width: 580px;
+            margin-top: 90px;
+        }
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: px-to-em(24);
+        line-height: 150%;
+        text-transform: uppercase;
+        color: #1A1C1D;
+        font-family: 'Oswald', sans-serif;
+    }
+
+    &__textone {
+        font-size: px-to-em(17);
+        line-height: 140%;
+        color: #1A1C1D;
+        margin-bottom: 25px;
+    }
+
+    &__input {
+        background: #FFFFFF;
+        border: 1px solid #EAEAEA;
+        font-weight: normal;
+        font-size: px-to-em(17);
+        line-height: 140%;
+        padding: 20px;
+        width: 445px;
+        margin-right: 20px;
+    }
+
+    &__button {
+        background: #009688;
+        border-radius: 100px;
+        padding: 20px 50px;
+        font-weight: 600;
+        font-size: px-to-em(18);
+        line-height: 123%;
+        border: none;
+        text-align: center;
+        color: #FFFFFF;
+        max-width: 250px;
+        cursor: pointer;
+    }
+
+    &__button:after {
+        display: block;
+        content: "";
+        border-bottom: 2px solid #FFFFFF;
+        width: 0;
+        transition: .3s;
+    }
+
+    &__button:hover::after {
+        width: 100%;
+    }
+
+    &__form {
+        margin-bottom: 20px;
+    }
+
+    &__text {
+        font-weight: 400;
+        font-size: px-to-em(16);
+        line-height: 140%;
+        width: 400px;
+        color: #989A9D;
+
+    }
+
+    @media screen and (max-width: 1500px) {
+        &__button {
+            margin-top: 30px;
+        }
+
+        &__image {
+            object-fit: cover;
+        }
+
+    }
+
+    @media screen and (max-width: 1200px) {
+        &__form {
+            &--cup {
+                @include flex-dir($jc:none, $ai:none);
+            }
+        }
+
+        &__image {
+            &--cup {
+                width: 45%;
+            }
+        }
+    }
+
+    @media screen and (max-width: 991px) {
+        &__content {
+            flex-direction: column;
+            &--bigcup {
+                padding-bottom: 100px;
+            }
+        }
+
+        &__info {
+            margin-left: 0;
+        }
+
+        &__titles {
+            margin-bottom: 40px;
+            &--bigcup {
+                font-size: px-to-em(24);
+                line-height: 150%;
+                max-width: 100%;
+            }
+        }
+
+        &__textone {
+            max-width: 100%;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        &__title {
+            text-align: center;
+            max-width: 100%;
+        }
+
+        &__form {
+            @include flex-dir;
+        }
+
+        &__input {
+            width: 100%;
+            margin-right: 0;
+        }
+
+        &__text {
+            text-align: center;
+            width: 100%;
+            margin-bottom: 60px;
+            &--bigcup {
+                margin-bottom: 0;
+            }
+        }
+
+        &__image {
+            order: 1;
+            max-width: 100%;
+            &--cup {
+                width: auto;
+                top: 100%;
+                transform: translateY(-50%);
+                
+            }
+           
+        }
+
+    }
+
+    @media screen and (max-width: 360px) {
+        &__textone {
+            text-align: left;
+        }
+        
+        &__title {
+            text-align: left;
+        }
+
+        &__image {
+            &--cup {
+                transform: translate(-20%, -50%);
+            }
+        }
+    }
+
+}

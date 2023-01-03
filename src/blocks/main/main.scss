@@ -1,0 +1,86 @@
+.main {
+    background: #1A1C1D;
+
+    &__content {
+      width: 95%;
+      max-width: 1440px;
+      margin: 0 auto;
+      @include flex-dir(row, space-between, none);
+      padding: 50px 0;
+      
+    }
+
+    &__info {
+        max-width: 540px;
+        margin: 50px 40px 0px 90px;
+    }
+
+    &__title {
+        font-family: Oswald;
+        font-weight: 500;
+        font-size: px-to-em(40);
+        line-height: 148%;
+        text-transform: uppercase;
+        margin-bottom: 40px;
+        color: #FFFFFF;
+    }
+
+    &__text {
+        font-weight: normal;
+        font-size: px-to-em(17);
+        line-height: 140%;
+        max-width: 500px;
+        margin: 0 80px 25px 0;
+        color: #FFFFFF;
+    }
+
+    &__image {
+        margin: 0 100px -100px 0;
+        object-fit: contain;
+        object-position: top;
+    }
+
+    @media screen and (max-width: 1200px) {
+        &__content {
+           @include flex-dir($jc:none);
+        }
+
+        &__info {
+            margin: 0 0 80px 0;
+            max-width: 100%;
+            text-align: center;
+        }
+
+        &__title {
+            font-size: px-to-em(31);
+            line-height: 147%;
+            max-width: 100%;
+        }
+
+        &__text {
+            font-size: px-to-em(16);
+            margin: 0 0 25px 0;
+            max-width: 100%;
+        }
+
+        &__image {
+            max-width: 90%;
+            margin: 0 0 -300px 0;
+        }
+    }
+
+    @media screen and (max-width: 360px) {
+        &__info {
+            text-align: left;
+        }
+
+        &__image {
+            max-width: 100%;
+        }
+    }
+
+    
+
+    
+
+}

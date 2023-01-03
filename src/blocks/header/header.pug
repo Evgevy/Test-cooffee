@@ -1,0 +1,23 @@
+mixin header(modifier)
+  header.header&attributes(attributes)
+    .header__content
+      .header__burger
+        .header__line 
+        .header__line
+        .header__line
+      a(href='/').header__logo
+        img(src='img/logo.png' alt="Петербургская кофейня").header__logoimage
+      .header__data
+        ul.header__menu
+          li.header__item
+            a(href='#').header__link Кофе оптом
+          li.header__item
+            a(href='#').header__link White Label 
+          li.header__item
+            a(href='#').header__link Бесплатная кофемашина
+        .header__contacts
+          a(href='tel:+78126034911').header__phone +7 812 603 49 11
+          a(href='#').header__buttonlink Оставить заявку
+        +part("header")
+      img(src='img/frame.svg').header__mail
+    

@@ -1,0 +1,23 @@
+mixin footer(modifier)
+  footer.footer&attributes(attributes)
+    .footer__content
+      .footer__menulogo
+        a(href='#').footer__logo
+          img(src="img/logo.png" alt="Петербургская кофейня").footer__logoimage
+      .footer__blocks
+        p.footer__text Использование любых материалов с этого сайта возможно только после письменного согласия владельца авторских прав
+        .footer__info 
+          h3.footer__title Мы предлагаем
+          a(href='#').footer__infolink Кофе оптом
+          a(href='#').footer__infolink White Label
+          a(href='#').footer__infolink Бесплатная кофемашина
+        .footer__info 
+          h3.footer__title Помощь
+          a(href='#').footer__infolink Частые вопросы
+          a(href='#').footer__infolink Реквизиты
+          a(href='#').footer__infolink О компании ПКМ
+        +part("footer")
+        a(href='#').footer__onelink Политика конфиденциальности 
+    .footer__copyright 
+      .footer__term © 2013-2021 “ПКМ”
+      .footer__privacy Политика конфиденциальности          

@@ -1,0 +1,131 @@
+.footer {
+    &__content {
+        width: 95%;
+        max-width: 1440px;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    &__blocks {
+        @include flex-dir(row, space-evenly, none);
+        flex-wrap: wrap;
+    }
+
+    &__menulogo {
+        margin: 50px 0 0 150px;
+    }
+
+    &__text {
+        font-family: 'Inter';
+        font-size: px-to-em(14);
+        line-height: 130%;
+        color: #9F9F9F;
+        max-width: 255px;
+        margin-top: 30px;
+        width: 100%;
+    }
+
+    &__title {
+        font-family: 'Oswald';
+        font-weight: 500;
+        font-size: px-to-em(18);
+        line-height: 150%;
+        text-transform: uppercase;
+        color: #32363C;
+        margin-bottom: 20px;
+    }
+
+    &__info {
+        @include flex-dir($jc:none, $ai:none);
+    }
+
+    &__infolink {
+        font-size: px-to-em(16);
+        line-height: 118%;
+        color: #9F9F9F;
+        text-decoration: none;
+        margin-bottom: 20px;
+    }
+
+    &__copyright {
+        @include flex-dir(row, space-between, none);
+        margin: 80px 140px 20px;
+        font-family: 'Inter';
+        font-weight: 500;
+        font-size: px-to-em(14);
+        line-height: 121%;
+        color: #9F9F9F;
+        border-top: 1px solid  #EAEAEA;
+        padding-top: 10px;
+    }
+
+    &__onelink {
+        display: none;
+    }
+
+    @media screen and (max-width: 991px) {
+        &__content {
+            @include flex-dir($jc:none, $ai:none);
+        }
+
+        &__menulogo {
+            text-align: center;
+            margin: -70px 0 0;
+        }
+
+        &__info {
+            margin: 30px 0 0;
+        }
+
+        &__part {
+            margin: 30px 0 80px;
+        }
+
+        &__text {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            max-width: 100%;
+            text-align: center;
+            margin: 0;
+        }
+
+        &__copyright {
+            margin: 80px 10px 20px;
+            gap: 10px;
+        }
+
+    }
+
+    @media screen and (max-width: 768px) {
+        &__blocks {
+            justify-content: space-between;
+            gap: 30px;
+        }
+    }
+
+    @media screen and (max-width: 360px) {
+        &__blocks {
+            gap: 13px;
+        }
+
+        &__privacy {
+            display: none;
+        }
+
+        &__part {
+            margin-bottom: 0;
+        }
+        &__onelink {
+            display: block;
+            margin: 20px 0 40px;
+            font-size: px-to-em(14);
+            line-height: 121%;
+            color: #32363C;
+        }
+
+        &__text {
+            text-align: left;
+        }
+    }
+}

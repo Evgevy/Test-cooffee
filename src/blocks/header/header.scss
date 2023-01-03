@@ -1,0 +1,241 @@
+.header {  
+    background: white;
+    
+    &__content {
+        @include flex-dir(row,space-between);
+        width: 95%;
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 10px 0;
+        
+    }
+
+    &__logoimage {
+        margin: 0 20px -80px;
+    }
+
+    &__data {
+        @include flex-dir(row,space-between);
+        width: 100%;
+    }
+
+    &__menu {
+        display: flex;
+        list-style: none;
+        text-align: center;
+    }
+
+    &__link {
+        text-decoration: none;
+        font-weight: 600;
+        font-size: px-to-em(16);
+        line-height: 120%;
+        color: #332F2F;
+    }
+
+    &__link:after {
+        display: block;
+        content: "";
+        height: 2px;
+        width: 0;
+        background-color: #332F2F;
+        transition: 0.4s;
+    }
+
+    &__link:hover:after,
+    &__link:focus:after{
+        width: 100%;
+    }
+
+    &__item {
+        display: flex;
+    }
+
+    &__item:after {
+        content:  '/';
+        margin: 0 30px;
+    }
+
+    &__item:last-child::after {
+        content: '';
+        margin: 0;
+        color: #332F2F;
+        opacity: 0.2;
+        padding-right: 10px;
+    }
+
+    &__contacts {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__phone {
+        margin-top: 30px;
+        margin-right: 30px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: px-to-em(20);
+        line-height: 120%;
+        color: #32363C;
+        white-space: nowrap;
+    }
+
+    &__buttonlink {
+        width: 200px;
+        height: 55px;
+        border: 2px solid #009688;
+        box-sizing: border-box;
+        border-radius: 100px;
+        text-align: center;
+        margin-top: 10px;
+        padding-top: 20px;
+        padding-bottom: 40px;
+        font-weight: 600;
+        font-size: px-to-em(16);
+        line-height: 120%;
+        color: #32363C;
+        text-decoration: none;
+       
+    }
+
+    &__buttonlink:after {
+        display: block;
+        content: '';
+        border-bottom: 2px solid white;
+        width: 0;
+        transition: 0.2s;
+        transform: translateX(33%);
+    }
+
+    &__buttonlink:hover {
+        color: white;
+        background-color: #009688;
+    }
+
+    &__buttonlink:hover:after {
+        width: 60%;
+    }
+        
+
+    &__burger {
+        display: none;
+    }
+
+    &__mail {
+        display: none;
+    }
+
+    &__part {
+        display: none;
+    }
+
+    @media screen and (max-width: 991px) {
+        &__content {
+            position: relative;
+            margin: 0;
+            padding: 10px 20px;
+            width: 100%;
+        }
+
+        &__logo {
+            &--hide {
+                display: none;
+            }
+        }
+
+        &__contacts {
+            display: none;
+        }
+
+        &__data {
+            display: none;
+            &--open {
+                display: block;
+                position: absolute;
+                background-color: white;
+                top: 100%;
+                left: 0;
+                padding: 0 15px 20px;
+            }
+        }
+
+        &__part {
+            display: block;
+            margin-top: 40px;
+        }
+
+        &__menu {
+            display: block;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        &__item {
+            border-bottom: 1px solid #EAEAEA;
+            padding: 20px 0;
+        }
+
+        &__item:after {
+            content:  '';
+        }
+
+        &__item:nth-child(1) {
+            border-top: 1px solid #EAEAEA;
+        }
+
+        &__link {
+            font-size: px-to-em(18);
+            line-height: 122%;
+            color: #32363C;
+        }
+
+        &__burger {
+            background-color: white;
+            width: 40px;
+            height: 40px;
+            @include flex-dir;
+           
+        }
+
+        &__line {
+            transition: all 0.3s;
+            height: 4px;
+            background-color: #000000;
+            display: block;
+            width: 30px;
+            margin: 3px;
+        }
+
+        &__line {
+            &--first {
+            transform: translate(6px, -1px) rotate(45deg);
+            transform-origin: left top;
+            height: 3px;
+            }
+        }
+
+        &__line {
+            &--middle {
+                scale: (0);
+            }
+        }
+
+        &__line {
+            &--last {
+                transform: translate(-3px, -20px) rotate(-45deg);
+                transform-origin: right bottom;
+                height: 3px;
+            }
+        }
+
+        &__mail {
+            display: block;
+            cursor: pointer;
+        }
+
+    
+
+       
+    }
+}

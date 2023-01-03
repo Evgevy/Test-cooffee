@@ -1,0 +1,84 @@
+.fire {
+    &__content {
+      width: 95%;
+      max-width: 1440px;
+      margin: 0 auto;
+      @include flex-dir(row, center, none);
+      padding: 56px 0 48px;
+    }
+
+    &__info {
+      max-width: 540px;
+      margin: 70px 20px 0 0;
+    }
+
+    &__title {
+      font-family: Oswald;
+      font-weight: 500;
+      font-size: px-to-em(40);
+      line-height: 150%;
+      text-transform: uppercase;
+      color: #1A1C1D;
+      margin-bottom: 40px;
+    }
+    
+    &__text {
+    font-size: px-to-em(17);
+    line-height: 140%;
+    color: #32363C;
+    margin-bottom: 30px;
+    }
+
+    &__image {
+        object-fit: contain;
+    }
+
+    &__picture {
+        display: none;
+    }
+
+    @media screen and (max-width: 1500px) {
+        &__image {
+            max-width: 50%;
+        }
+        
+    }
+
+    @media screen and (max-width: 991px) {
+        &__content {
+            @include flex-dir;
+        }
+
+        &__info {
+            margin: 0 0 35px;
+        }
+
+        &__title {
+            font-size: px-to-em(32);
+            line-height: 147%;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        &__text {
+            font-size: px-to-em(16);
+            
+        }
+
+        &__image {
+            max-width: 100%;
+            padding-left: 10%;
+        }
+    }
+
+    @media screen and (max-width: 361px) {
+        &__image {
+            display: none;
+        }
+
+        &__picture {
+            display: block;
+            max-width: 100%;
+        }
+    }
+}

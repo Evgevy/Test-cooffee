@@ -1,0 +1,57 @@
+.part {
+    &__phone {
+        font-family: 'Oswald';
+        font-weight: 500;
+        font-size: px-to-em(24);
+        line-height: 83%;
+        text-transform: uppercase;
+        color: #32363C;
+        text-decoration: none;
+        margin-top: 10px;
+    }
+
+    &__web {
+        display: flex;
+        gap: 10px;
+        margin: 20px 0 20px 10px;
+    }
+
+    &__site {
+        padding: 11px 11px 5px 10px;
+        border-radius: 50%;
+        background: #F5F5F5;
+        opacity: 0.5;
+    }
+
+    &__site:hover {
+        background: #009688;
+        opacity: 1;
+        svg {
+            path {
+                fill: #FFFFFF;
+            }
+        }
+        
+    }
+
+    &__block {
+        @include flex-dir($jc:none, $ai:none);
+        gap: 15px;
+        font-size: px-to-em(16);
+        line-height: 118%;
+    }
+
+    &__blocklink {
+        text-decoration: none;
+        color: #2D2D30;
+    }
+
+    &__blocklink:last-child {
+        font-size: px-to-em(15);
+        line-height: 140%;
+        color: #2F80ED;
+        text-decoration: underline;
+    }
+
+  
+}

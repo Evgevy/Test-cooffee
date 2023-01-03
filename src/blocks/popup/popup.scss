@@ -1,0 +1,142 @@
+.popup {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    &--hide {
+        display: none;
+    }
+
+    &__content {
+        max-width: 580px;
+        width: 100%;
+        @include flex-dir;
+        margin: 0 auto;
+        padding: 50px;
+        background: #FFFFFF;
+        position: relative;
+        z-index: 1;
+    }
+
+    &__background {
+        background-color: rgba(0, 0, 0, 0.7);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+        
+    &__close {
+        align-self: flex-end;
+        cursor: pointer;
+    }
+
+    &__title {
+        font-family: 'Oswald';
+        font-style: normal;
+        font-weight: 500;
+        font-size: px-to-em(40);
+        line-height: 147%;
+        color: #1A1C1D;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+    }
+
+    &__text {
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 400;
+        font-size: px-to-em(17);
+        line-height: 140%;
+        text-align: center;
+        color: #32363C;
+        max-width: 320px;
+        margin-bottom: 30px;
+    }
+
+    &__form {
+        @include flex-dir;
+    }
+
+    &__tel {
+        width: 480px;
+        padding: 20px;
+        margin-bottom: 15px;
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 140%;
+        color: #32363C;
+        opacity: 0.4;
+        
+    }
+
+    &__email {
+        width: 480px;
+        padding: 20px;
+        margin-bottom: 30px;
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 140%;
+        color: #32363C;
+        opacity: 0.4;
+       
+    }
+
+    &__btn {
+        background: #009688;
+        border-radius: 100px;
+        padding: 20px 50px;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+    }
+
+    @media screen and (max-width: 768px) {
+        &__content {
+            width: 90%;
+            padding: 20px;
+        }
+
+        &__title {
+            font-size: px-to-em(24);
+            line-height: 150%;
+            max-width: 100%;
+        }
+
+        &__text {
+            font-size: px-to-em(15);
+            opacity: 0.4;
+        }
+
+        &__tel {
+            width: 320px;
+        }
+
+        &__email {
+            width: 320px;
+        }
+    }
+
+    @media screen and (max-width: 360px) {
+        &__tel {
+            width: 280px;
+        }
+
+        &__email {
+            width: 280px;
+        }
+    }
+  
+}

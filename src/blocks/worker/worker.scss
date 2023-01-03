@@ -1,0 +1,127 @@
+.worker {
+    position: relative;
+
+    &__content {
+        width: 95%;
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+
+    &__info {
+        @include flex-dir(row, space-between);
+        margin: 90px 40px 0 90px;
+    }
+
+    &__title {
+        max-width: 600px;
+        font-family: 'Oswald';
+        font-weight: 500;
+        font-size: px-to-em(40);
+        line-height: 147%;
+        text-transform: uppercase;
+        color: #1A1C1D;
+    }
+
+    &__button {
+        background: #009688;
+        border-radius: 100px;
+        padding: 20px 60px;
+        border: none;
+        font-weight: 600;
+        font-size: px-to-em(18);
+        line-height: 122%;
+        text-align: center;
+        color: #FFFFFF;
+        max-width: 240px;
+        margin-right: 50px;
+        cursor: pointer;
+    }
+
+    &__button::after {
+        display: block;
+        content: "";
+        border-bottom: 2px solid white;
+        width: 0;
+        transition: .3s;
+    }
+
+    &__button:hover::after {
+        width: 100%;
+    }
+
+    &__main {
+        @include flex-dir(row, space-between, none);
+        margin: 40px 90px;
+        gap: 45px;
+    }
+
+    &__name {
+        font-weight: 600;
+        font-size: px-to-em(24);
+        line-height: 120%;
+        color: #32363C;
+        margin: 30px 0 5px;
+    }
+
+    &__text {
+        font-size: px-to-em(15);
+        line-height: 140%;
+        color: #989A9D;
+    }
+
+    @media screen and (max-width: 1500px) {
+        &__image {
+            object-fit: contain;
+            max-width: 100%;
+        }
+
+    }
+
+    @media screen and (max-width: 1075px) {
+        &__info {
+            @include flex-dir;
+            margin: 0 auto;
+        }
+
+        &__title {
+            max-width: 100%;
+            text-align: center;
+        }
+
+        &__button {
+            margin: 40px 0;
+        }
+
+        &__main {
+            margin: 0 0 80px;
+            gap: 20px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        &__main {
+            @include flex-dir;
+            margin-bottom: 160px;
+        }
+
+        &__button {
+            position: absolute;
+            top: 100%;
+            margin: 40px 0 0;
+        }
+
+        &__title {
+            font-size: px-to-em(32);
+            line-height: 146%;
+            margin: 0 0 40px;
+        }
+    }
+
+    @media screen and (max-width: 360px) {
+        &__title {
+            text-align: left;
+        }
+    }
+
+    
+}

@@ -1,0 +1,40 @@
+.figure {
+    &__content {
+        width: 95%;
+        max-width: 1440px;
+        margin: 0 auto;
+        @include flex-dir(row);
+        padding: 64px 0 56px;
+    }
+
+    &__sticker {
+        text-align: center;
+        width: 300px;
+        margin: 0 22px;
+    }
+
+    &__text {
+       margin-top: 20px;
+       font-weight: 600;
+       font-size: px-to-em(20);
+       line-height: 120%;
+       text-align: center;
+       color: #32363C;
+    }
+
+    @media screen and (max-width: 991px) {
+        &__content {
+            @include flex-dir($jc:none);
+        }
+
+        &__sticker {
+            margin-bottom: 40px;
+        }
+
+        &__text {
+            line-height: 130%;
+        }
+        
+    }
+   
+}

@@ -1,0 +1,18 @@
+mixin part(cl)
+  div(class=`${cl ? cl + '__part' : ''}`).part
+    .part__content 
+      .part__info 
+        a(href='tel:+78126034911').part__phone +7 (812) 603 49 11
+        .part__web 
+          a(href='#!').part__site
+            include img/telega.svg 
+          a(href='#').part__site
+            include img/insta.svg
+          a(href='#').part__site
+            include img/vkon.svg
+        .part__block
+          a(href='mailto:info@pcmonline.ru').part__blocklink info@pcmonline.ru
+          a(href='#').part__blocklink Санкт-Петербург, наб.
+            br 
+            | Обводного канала д. 24
+          a(href='#').part__blocklink Смотреть на карте

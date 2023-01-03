@@ -1,0 +1,103 @@
+.testcoffee {
+    background: #F5F8F9;
+    &__content {
+        width: 95%;
+        max-width: 1440px;
+        margin: 0 auto;
+        @include flex-dir(row, space-around);
+        padding: 80px 20px 60px;
+    }
+
+    &__title {
+        max-width: 540px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: px-to-em(40);
+        line-height: 147%;
+        text-transform: uppercase;
+        color: #1A1C1D;
+        margin-bottom: 30px;
+        font-family: 'Oswald', sans-serif;
+        width: 100%;
+    }
+
+    &__link {
+        font-family: Lato;
+        font-weight: 600;
+        font-size: px-to-em(24);
+        line-height: 120%;
+        color: #32363C;
+        text-decoration: none;
+        margin-right: 34px;
+        background: #FED96A;
+        border-radius: 20px;
+        padding: 0 10px;
+    }
+
+    &__links {
+        margin-bottom: 18px;
+        white-space: nowrap;
+    }
+
+    &__text {
+        font-size: px-to-em(17);
+        line-height: 140%;
+        color: #332F2F;
+        max-width: 540px;
+        width: 100%;
+    }
+
+    @media screen and (max-width: 1500px) {
+        &__image {
+            object-fit: cover;
+            max-width: 50%;
+            padding-left: 10px;
+        }
+
+    }
+
+    @media screen and (max-width: 991px) {
+        &__content {
+            flex-direction: column;
+            text-align: center;
+            padding: 140px 0 150px;
+        }
+
+        &__title {
+            font-size: px-to-em(32);
+            line-height: 147%;
+        }
+
+        &__link {
+            font-size: px-to-em(15);
+            line-height: 120%;
+            margin: 0;
+        }    
+
+        &__link:last-child {
+            margin-left: 20px;
+        }
+
+        &__text {
+            font-size: px-to-em(16);
+            margin-bottom: 40px;
+        }
+
+        &__image {
+            max-width: 100%;
+            padding: 0;
+        }
+
+    }
+
+    @media screen and (max-width: 360px) {
+        &__title {
+            text-align: left;
+        }
+
+        &__text {
+            text-align: left;
+        }
+    }
+
+}
