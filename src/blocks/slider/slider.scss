@@ -90,14 +90,6 @@
             font-size: 16px;
         }
 
-       /* &__images:nth-child(1) {
-            display: flex;
-            align-items: center;
-        }
-
-        &__logo {
-            margin: 0 0 0 20px;
-        }*/
     }
 
     @media screen and (max-width: 768px) {
@@ -110,21 +102,6 @@
             padding-top: 0;
             flex-direction: column;
         }
-
-        /*&__arrow {
-            align-self: flex-end;
-            background: none;
-            max-width: 12%;
-            &--next {
-                order: -1;
-                transform: translateY(150%) rotate(180deg);
-            }
-            &--prev {
-                transform: translateY(150%);
-                z-index: 1;
-            }
-            
-        }*/
 
         &__arrow {
             background: none;
