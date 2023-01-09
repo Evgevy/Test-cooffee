@@ -10,25 +10,13 @@
     &__slick-list {
         @include flex-dir(row, $ai:start);
         margin: 130px 0px;
-
-        svg {
-            background: #F5F8F9;
-            cursor: pointer;
-        }
     }
 
-    &__slick-list {
-        svg:hover {
-            path {
-                stroke: #989A9D;
-            }
-        }
-    }
+   
 
     &__main {
         max-width: 920px;
         width: 100%;
-        //height: inherit !important;
     }
 
     &__slide.slick-slide {
@@ -89,6 +77,11 @@
     }
 
     @media screen and (max-width: 991px) {
+        &__slick-list {
+            padding-top: 50px;
+            margin-bottom: 30px;
+        }
+
         &__slide.slick-slide {
             flex-direction: column;
         }
@@ -97,13 +90,13 @@
             font-size: 16px;
         }
 
-        /*&__images:nth-child(1) {
+       /* &__images:nth-child(1) {
             display: flex;
             align-items: center;
-        }*/
+        }
 
-        /*&__logo {
-            margin: 0;
+        &__logo {
+            margin: 0 0 0 20px;
         }*/
     }
 
@@ -114,7 +107,7 @@
         }
 
         &__slick-list {
-            margin: 0 0 80px;
+            padding-top: 0;
             flex-direction: column;
         }
 
@@ -147,14 +140,18 @@
     }
 
     @media screen and (max-width: 360px) {
+        &__slick-list {
+            margin-top: 50px;
+        }
+
         &__arrow {
-            width: 13%;
+            width: 20%;
             &--prev {
-                transform: translate(670%, 280%);
+                transform: translate(450%, 280%);
                 z-index: 1;
             }
             &--next {
-                transform: translateY(70%) rotate(180deg);
+                transform: translate(50%, 70%) rotate(180deg);
             }
         }
 
@@ -164,7 +161,7 @@
 
         &__logo {
             max-width: 35%;
-            margin: 0 0 0 20px;
+            margin: 0 0 0 10px;
         }
 
         &__images {
